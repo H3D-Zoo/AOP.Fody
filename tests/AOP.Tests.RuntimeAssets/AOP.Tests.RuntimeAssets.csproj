@@ -1,0 +1,39 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+
+    <IsPackable>false</IsPackable>
+
+    <RootNamespace>AOP.Tests.Assets</RootNamespace>
+
+    <ApplicationIcon />
+
+    <OutputType>Library</OutputType>
+
+    <StartupObject />
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Fody" Version="3.2.17">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.9.0" />
+    <PackageReference Include="xunit" Version="2.4.0" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\AOP.Broker\AOP.Broker.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <WeaverTargetFolder>netstandard2.0</WeaverTargetFolder>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <WeaverFiles Include="$(SolutionDir)src\AOP.Fody\bin\$(Configuration)\$(WeaverTargetFolder)\AOP.Fody.dll"></WeaverFiles>
+  </ItemGroup>
+
+</Project>

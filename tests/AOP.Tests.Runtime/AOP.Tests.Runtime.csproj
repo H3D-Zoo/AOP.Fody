@@ -1,0 +1,40 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="4.8.1" />
+    <PackageReference Include="Fody" Version="3.2.17">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="FodyHelpers" Version="3.2.17" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.9.0" />
+    <PackageReference Include="xunit" Version="2.4.0" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\AOP.Broker\AOP.Broker.csproj" />
+    <ProjectReference Include="..\..\src\AOP.Fody\AOP.Fody.csproj" />
+    <ProjectReference Include="..\AOP.Tests.RuntimeAssets\AOP.Tests.RuntimeAssets.csproj" />
+    <ProjectReference Include="..\AssemblyToProcess\AssemblyToProcess.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <WeaverTargetFolder>netstandard2.0</WeaverTargetFolder>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <WeaverFiles Include="$(SolutionDir)src\AOP.Fody\bin\$(Configuration)\$(WeaverTargetFolder)\AOP.Fody.dll"></WeaverFiles>
+  </ItemGroup>
+
+  <ItemGroup>
+    
+  </ItemGroup>
+  
+</Project>

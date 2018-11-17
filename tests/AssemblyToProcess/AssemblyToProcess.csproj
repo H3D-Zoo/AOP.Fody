@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\AOP.Broker\AOP.Broker.csproj" />
+    <ProjectReference Include="..\AOP.Tests.RuntimeAssets\AOP.Tests.RuntimeAssets.csproj" />
+  </ItemGroup>
+
+</Project>
