@@ -7,6 +7,11 @@
   <PropertyGroup>
     <PackageId>AOP.Fody</PackageId>
     <WeaverDirPath>..\$(PackageId)\bin\$(Configuration)\</WeaverDirPath>
+    <Authors>leohawke</Authors>
+    <PackageIconUrl>https://raw.githubusercontent.com/H3D-Zoo/$(PackageId)/master/package.png</PackageIconUrl>
+    <PackageProjectUrl>http://github.com/H3D-Zoo/$(PackageId)</PackageProjectUrl>
+    <Company>H3D</Company>
+    <Description>A framework for creating and injecting aspects into your .net assemblies.</Description>
   </PropertyGroup>
   
   <ItemGroup>
