@@ -4,7 +4,7 @@ using Mono.Cecil;
 using AOP.Core.Advice.Effects;
 using System.Linq;
 using AOP.Core.Extensions;
-using static AOP.Broker.Advice;
+using static AOP. Broker.Advice;
 using AOP.Core.Models;
 using Fody;
 

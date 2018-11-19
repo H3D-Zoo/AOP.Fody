@@ -5,7 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\AOP.Broker\AOP.Broker.csproj" />
     <ProjectReference Include="..\AOP.Tests.RuntimeAssets\AOP.Tests.RuntimeAssets.csproj" />
   </ItemGroup>
 

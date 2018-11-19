@@ -24,13 +24,13 @@
     <PackageReference Include="xunit.runner.visualstudio" Version="2.4.0" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\..\src\AOP.Broker\AOP.Broker.csproj" />
-  </ItemGroup>
-
   <PropertyGroup>
     <WeaverTargetFolder>netstandard2.0</WeaverTargetFolder>
   </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\AOP\AOP.csproj" />
+  </ItemGroup>
 
   <ItemGroup>
     <WeaverFiles Include="$(SolutionDir)src\AOP.Fody\bin\$(Configuration)\$(WeaverTargetFolder)\AOP.Fody.dll"></WeaverFiles>

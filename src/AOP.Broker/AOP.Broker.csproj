@@ -4,4 +4,15 @@
     <TargetFrameworks>net46;netstandard2.0</TargetFrameworks>
   </PropertyGroup>
 
+  <PropertyGroup>
+    <PackageId>AOP.Fody</PackageId>
+    <WeaverDirPath>..\$(PackageId)\bin\$(Configuration)\</WeaverDirPath>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="FodyPackaging" Version="3.3.0" />
+  </ItemGroup>
+
+ 
+ 
 </Project>

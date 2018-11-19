@@ -1,6 +1,7 @@
 ﻿using AOP.Core.Contracts;
 using Mono.Cecil;
 using System;
+using Fody;
 using System.Linq;
 
 namespace AOP.Core.Models
@@ -29,7 +30,7 @@ namespace AOP.Core.Models
 
         public abstract bool IsApplicableFor(IMemberDefinition target);
 
-        public abstract bool Validate(AspectDefinition aspect, Fody.BaseModuleWeaver weaver);
+        public abstract bool Validate(AspectDefinition aspect, BaseModuleWeaver weaver);
 
         public override string ToString()
         {

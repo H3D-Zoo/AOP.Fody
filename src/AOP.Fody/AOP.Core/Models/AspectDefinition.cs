@@ -2,6 +2,7 @@
 using Mono.Cecil;
 using System.Collections.Generic;
 using System.Linq;
+using Fody;
 using static AOP.Broker.Aspect;
 
 namespace AOP.Core.Models
@@ -50,7 +51,7 @@ namespace AOP.Core.Models
                 c.Cast(Host);
         }
 
-        public bool Validate(Fody.BaseModuleWeaver weaver)
+        public bool Validate(BaseModuleWeaver weaver)
         {
             if (!Effects.Any())
                 weaver.LogWarning($"Type {Host.FullName} has defined as an aspect, but lacks any effect.");
